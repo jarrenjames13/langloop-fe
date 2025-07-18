@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { LANGUAGE_TO_FLAG } from "../constants";
 import { getUserFriends } from '../lib/api';
+import NoFriendsFound from '../components/NoFriendsFound';
 
 // Helper function to get language flags
 const getLanguageFlag = (language) => {
@@ -54,17 +55,6 @@ const FriendCard = ({ friend }) => {
   );
 };
 
-// NoFriendsFound Component
-const NoFriendsFound = () => {
-  return (
-    <div className="card bg-base-200 p-6 text-center">
-      <h3 className="font-semibold text-lg mb-2">No friends yet</h3>
-      <p className="text-base-content opacity-70">
-        Connect with language partners below to start practicing together!
-      </p>
-    </div>
-  );
-};
 
 // Main FriendsPage component
 const FriendsPage = () => {
